@@ -141,9 +141,25 @@ body,button,input{font-family:Paperlogy,-apple-system,BlinkMacSystemFont,"Apple 
 .status.stable{background:#5dff9b;box-shadow:0 0 6px #2bff7acc,0 0 14px #2bff7a66}
 .status.beta{background:#c58bff;box-shadow:0 0 6px #b061ffcc,0 0 14px #b061ff66}
 .status.dev{background:#ff7ad9;box-shadow:0 0 6px #ff4fcfcc,0 0 14px #ff4fcf66}
+
+/* v3.13 — 나만의 서랍 */
+.lock-btn{border:0;background:none;padding:4px;margin-left:4px;vertical-align:middle;opacity:.45;color:inherit}
+.lock-btn:hover{opacity:1}
+.drawer{margin:0 0 54px}
+.drawer .section-head{margin-bottom:18px}
+.drawer-lock{border:0;background:none;padding:0;text-decoration:underline;font-size:inherit;color:inherit}
+.private-card .thumb:after{content:"";position:absolute;left:10px;top:10px;width:30px;height:30px;border-radius:50%;background:#fffaf0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='11' width='14' height='10' rx='2' fill='none' stroke='%23171715' stroke-width='2.4'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3' fill='none' stroke='%23171715' stroke-width='2.4'/%3E%3C/svg%3E") center/16px no-repeat;border:2px solid var(--ink)}
+.drawer-form{display:flex;flex-direction:column;align-items:center;gap:12px}
+.drawer-form h2{font-size:24px}
+.drawer-form p{margin:0}
+#drawer-pin{width:150px;text-align:center;font:inherit;font-size:30px;letter-spacing:.5em;padding:10px 0 10px .5em;border:3px solid var(--ink);border-radius:14px;background:#fffaf0}
+.remember{font-size:13px;display:flex;gap:6px;align-items:center}
+.drawer-error{min-height:1.4em;font-size:13px;color:#b3261e}
+.drawer-open{border:3px solid var(--ink);cursor:pointer}
 </style></head>
-<body><a class="skip" href="#collection">앱 목록으로 바로 가기</a><div class="wrap"><header class="topbar"><button type="button" class="signature about-trigger" aria-haspopup="dialog"><img src="assets/img/face.png" alt=""><span class="sig-name">Hanryang Kim's Digital Workshop<span class="sig-extra"> Showcase</span></span></button><nav class="nav" aria-label="메인 메뉴"><button type="button" class="about-trigger" aria-haspopup="dialog">공방 소개</button></nav></header><main><section class="hero" aria-labelledby="main-title"><div class="hero-copy"><p class="eyebrow">SMALL TOOLS, BIG POSSIBILITIES</p><h1 id="main-title"><img src="assets/img/face.png" alt=""><span>김한량 디지털 공방</span></h1><p class="intro">교실에서 떠오른 아이디어가, 일상을 돕는 도구로.<br>직접 만들고 다듬은 작은 앱들을 모았습니다.</p><a class="pill-link" href="#collection">공방 둘러보기 <span aria-hidden="true">↗</span></a><div class="stats"><div class="stat"><em>✦</em><strong>12</strong><small>직접 만든 앱</small></div><div class="stat"><em>↗</em><strong>06</strong><small>다양한 카테고리</small></div></div></div><div class="hero-bento" aria-label="공방의 작은 아이디어들"><div class="bento-item maker"><h2 class="card-phrase">즐거운<br>바이브코딩 놀이터</h2><img src="assets/img/upper-hands.png" alt="활짝 웃는 김한량 캐릭터"></div><div class="bento-item spark"><p class="card-phrase">학교에서 일상까지<br>다양한 활용</p><div class="props-marquee" aria-hidden="true"></div></div><div class="bento-item orange"><p class="card-phrase welcome"><span class="wave" aria-label="환영합니다!"><span aria-hidden="true"><span style="--i:0">환</span><span style="--i:1">영</span><span style="--i:2">합</span><span style="--i:3">니</span><span style="--i:4">다</span><span style="--i:5">!</span></span></span></p></div><a class="bento-strip contact" href="#" id="contact-link" aria-label="메일 보내기"><span class="contact-label"><svg class="mail-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Contact me</span><span class="contact-arrow" aria-hidden="true">↗</span></a></div></section><section class="category-area" aria-labelledby="category-title"><div class="category-label"><h2 id="category-title">어떤 도구를 찾으세요?</h2><p>6 CATEGORIES / 12 TOOLS</p></div><div id="category-shelf" class="category-shelf" aria-label="카테고리 바로 보기"></div></section><section id="collection" aria-labelledby="collection-title"><div class="section-head"><h2 id="collection-title">앱 컬렉션</h2><p id="result-count" role="status" aria-live="polite" aria-atomic="true">전체 · 12개의 앱</p></div><div id="filters" class="filters" role="group" aria-label="앱 카테고리 필터"></div><div id="gallery" class="gallery"></div><noscript>앱 목록과 카테고리 필터를 보려면 브라우저에서 JavaScript를 켜 주세요.</noscript><p class="collection-note">작은 도구 하나가, 오늘의 일을 조금 더 가볍게.</p></section><section id="toolbox" class="toolbox" aria-labelledby="toolbox-title" hidden><div class="section-head"><h2 id="toolbox-title"></h2><p id="toolbox-count"></p></div><p class="toolbox-desc"></p><div id="toolbox-list" class="toolbox-list"></div></section></main><footer class="footer"><span>© 김한량 디지털 공방</span><span>작은 아이디어를 쓸모 있는 도구로.<br><span id="footer-updated"></span></span></footer></div>
+<body><a class="skip" href="#collection">앱 목록으로 바로 가기</a><div class="wrap"><header class="topbar"><button type="button" class="signature about-trigger" aria-haspopup="dialog"><img src="assets/img/face.png" alt=""><span class="sig-name">Hanryang Kim's Digital Workshop<span class="sig-extra"> Showcase</span></span></button><nav class="nav" aria-label="메인 메뉴"><button type="button" class="about-trigger" aria-haspopup="dialog">공방 소개</button></nav></header><main><section class="hero" aria-labelledby="main-title"><div class="hero-copy"><p class="eyebrow">SMALL TOOLS, BIG POSSIBILITIES</p><h1 id="main-title"><img src="assets/img/face.png" alt=""><span>김한량 디지털 공방</span></h1><p class="intro">교실에서 떠오른 아이디어가, 일상을 돕는 도구로.<br>직접 만들고 다듬은 작은 앱들을 모았습니다.</p><a class="pill-link" href="#collection">공방 둘러보기 <span aria-hidden="true">↗</span></a><div class="stats"><div class="stat"><em>✦</em><strong>12</strong><small>직접 만든 앱</small></div><div class="stat"><em>↗</em><strong>06</strong><small>다양한 카테고리</small></div></div></div><div class="hero-bento" aria-label="공방의 작은 아이디어들"><div class="bento-item maker"><h2 class="card-phrase">즐거운<br>바이브코딩 놀이터</h2><img src="assets/img/upper-hands.png" alt="활짝 웃는 김한량 캐릭터"></div><div class="bento-item spark"><p class="card-phrase">학교에서 일상까지<br>다양한 활용</p><div class="props-marquee" aria-hidden="true"></div></div><div class="bento-item orange"><p class="card-phrase welcome"><span class="wave" aria-label="환영합니다!"><span aria-hidden="true"><span style="--i:0">환</span><span style="--i:1">영</span><span style="--i:2">합</span><span style="--i:3">니</span><span style="--i:4">다</span><span style="--i:5">!</span></span></span></p></div><a class="bento-strip contact" href="#" id="contact-link" aria-label="메일 보내기"><span class="contact-label"><svg class="mail-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Contact me</span><span class="contact-arrow" aria-hidden="true">↗</span></a></div></section><section class="category-area" aria-labelledby="category-title"><div class="category-label"><h2 id="category-title">어떤 도구를 찾으세요?</h2><p>6 CATEGORIES / 12 TOOLS</p></div><div id="category-shelf" class="category-shelf" aria-label="카테고리 바로 보기"></div></section><section id="drawer" class="drawer" aria-labelledby="drawer-title" hidden><div class="section-head"><h2 id="drawer-title">나만의 서랍</h2><p><span id="drawer-count"></span> · <button type="button" class="drawer-lock" id="drawer-lock">잠그기</button></p></div><div id="drawer-list" class="gallery"></div></section><section id="collection" aria-labelledby="collection-title"><div class="section-head"><h2 id="collection-title">앱 컬렉션</h2><p id="result-count" role="status" aria-live="polite" aria-atomic="true">전체 · 12개의 앱</p></div><div id="filters" class="filters" role="group" aria-label="앱 카테고리 필터"></div><div id="gallery" class="gallery"></div><noscript>앱 목록과 카테고리 필터를 보려면 브라우저에서 JavaScript를 켜 주세요.</noscript><p class="collection-note">작은 도구 하나가, 오늘의 일을 조금 더 가볍게.</p></section><section id="toolbox" class="toolbox" aria-labelledby="toolbox-title" hidden><div class="section-head"><h2 id="toolbox-title"></h2><p id="toolbox-count"></p></div><p class="toolbox-desc"></p><div id="toolbox-list" class="toolbox-list"></div></section></main><footer class="footer"><span>© 김한량 디지털 공방 <button type="button" class="lock-btn" id="lock-btn" aria-label="나만의 서랍" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></span><span>작은 아이디어를 쓸모 있는 도구로.<br><span id="footer-updated"></span></span></footer></div>
 <dialog id="about-dialog" aria-labelledby="about-title"><button type="button" class="close-dialog" aria-label="공방 소개 닫기" autofocus>×</button><img class="dialog-face" src="assets/img/face.png" alt="김한량 캐릭터 얼굴"><h2 id="about-title">김한량 디지털 공방</h2><div class="dialog-version" id="site-updated"></div><p>학교와 일상에 필요한 디지털 도구를 직접 만듭니다.<br>김한량이 만든 앱들을 모아 둔 작은 공방입니다.</p><p class="credit">Made by 김한량 디지털 공방</p></dialog>
+<dialog id="drawer-dialog" aria-labelledby="drawer-dialog-title"><button type="button" class="close-dialog" aria-label="닫기">×</button><form id="drawer-form" method="dialog" class="drawer-form"><h2 id="drawer-dialog-title">나만의 서랍</h2><p>비밀번호를 입력하세요.</p><input id="drawer-pin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" aria-label="비밀번호 숫자 4자리" required><label class="remember"><input type="checkbox" id="drawer-remember"> 이 기기에서 기억</label><p class="drawer-error" id="drawer-error" role="alert"></p><button type="submit" class="pill-link drawer-open">열기</button></form></dialog>
 <dialog id="details-dialog" aria-labelledby="details-title"><button type="button" class="close-dialog" aria-label="앱 정보 닫기" autofocus>×</button><div id="details-content" class="dialog-content"></div></dialog>
 <script>
 'use strict';
@@ -204,12 +220,15 @@ function selectCategory(id,scroll){
 filters.addEventListener('click',event=>{const btn=event.target.closest('[data-filter]');if(btn)selectCategory(btn.dataset.filter,false);});
 if(shelf)shelf.addEventListener('click',event=>{const btn=event.target.closest('[data-category]');if(btn)selectCategory(btn.dataset.category,true);});
 document.querySelectorAll('.about-trigger').forEach(btn=>btn.addEventListener('click',()=>about.showModal()));
-gallery.addEventListener('click',event=>{
- const btn=event.target.closest('[data-details]');if(!btn)return;
- const app=DATA.apps.find(a=>a.id===btn.dataset.details);if(!app)return;
+function showDetails(app){
  document.getElementById('details-content').innerHTML=`<p class="eyebrow">${escapeHTML(categoryById[app.category].name)}</p><h2 id="details-title">${escapeHTML(app.name)}</h2><span class="status ${app.status}">${statusName[app.status]}${app.version?' · v'+escapeHTML(app.version):''}</span><p>${escapeHTML(app.summary)}</p><div class="platforms">${app.platform.map(p=>`<span class="platform">${escapeHTML(p)}</span>`).join('')}</div>`;
  details.showModal();
+}
+gallery.addEventListener('click',event=>{
+ const btn=event.target.closest('[data-details]');if(!btn)return;
+ const app=DATA.apps.find(a=>a.id===btn.dataset.details);if(app)showDetails(app);
 });
+
 document.querySelectorAll('dialog').forEach(dialog=>{
  dialog.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
@@ -224,6 +243,37 @@ if(TOOLS.length){
  document.getElementById('toolbox-list').innerHTML=TOOLS.map(t=>{const o=t.origin;return `<article class="tool-card"><div class="tool-main"><h3 class="tool-name">${escapeHTML(t.name)}</h3><p class="tool-summary">${escapeHTML(t.summary)}</p><div class="platforms">${t.platform.map(p=>`<span class="platform">${escapeHTML(p)}</span>`).join('')}</div></div><div class="tool-origin"><span class="origin-label">원작</span><b>${escapeHTML(o.author)}</b>${o.license?`<span class="origin-license">${escapeHTML(o.license)}</span>`:''}<a class="origin-link" href="${escapeHTML(o.url)}" target="_blank" rel="noopener">GitHub · ${escapeHTML(o.repo)} <span aria-hidden="true">↗</span></a></div></article>`;}).join('');
  toolboxEl.hidden=false;
 }
+
+// ---- 나만의 서랍: data/private.enc를 비밀번호로 풀어 비공개 카드를 보인다 ----
+const drawerEl=document.getElementById('drawer'),drawerList=document.getElementById('drawer-list'),drawerDlg=document.getElementById('drawer-dialog');
+const KEY_STORE='workshop-drawer-key';
+const b64d=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
+let ENC=null,DRAWER=[];
+async function loadEnc(){if(ENC)return ENC;const r=await fetch(ROOT+'data/private.enc',{cache:'no-store'});if(!r.ok)throw new Error('no-enc');return ENC=await r.json();}
+async function keyFromPin(pin,enc){const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64d(enc.salt),iterations:enc.iter,hash:'SHA-256'},base,{name:'AES-GCM',length:256},true,['decrypt']);}
+async function openWith(key,enc){const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64d(enc.iv)},key,b64d(enc.ct));return JSON.parse(new TextDecoder().decode(pt));}
+function showDrawer(data){
+ DRAWER=data.apps||[];
+ drawerList.innerHTML=DRAWER.map(card).join('');
+ drawerList.querySelectorAll('.app-card').forEach(c=>c.classList.add('private-card'));
+ document.getElementById('drawer-count').textContent=`${DRAWER.length}개`;
+ drawerEl.hidden=false;
+}
+function lockDrawer(){localStorage.removeItem(KEY_STORE);DRAWER=[];drawerList.innerHTML='';drawerEl.hidden=true;}
+drawerList.addEventListener('click',event=>{const btn=event.target.closest('[data-details]');if(!btn)return;const app=DRAWER.find(a=>a.id===btn.dataset.details);if(!app)return;if(app.url)window.open(app.url,'_blank','noopener');else showDetails(app);});
+document.getElementById('drawer-lock').addEventListener('click',lockDrawer);
+document.getElementById('lock-btn').addEventListener('click',()=>{if(!drawerEl.hidden){drawerEl.scrollIntoView({behavior:'smooth'});return;}document.getElementById('drawer-error').textContent='';document.getElementById('drawer-pin').value='';drawerDlg.showModal();document.getElementById('drawer-pin').focus();});
+document.getElementById('drawer-form').addEventListener('submit',async event=>{
+ event.preventDefault();
+ const pin=document.getElementById('drawer-pin').value.trim(),err=document.getElementById('drawer-error');
+ err.textContent='여는 중…';
+ try{
+  const enc=await loadEnc();const key=await keyFromPin(pin,enc);const data=await openWith(key,enc);
+  if(document.getElementById('drawer-remember').checked){const raw=await crypto.subtle.exportKey('raw',key);localStorage.setItem(KEY_STORE,btoa(String.fromCharCode(...new Uint8Array(raw))));}
+  showDrawer(data);drawerDlg.close();drawerEl.scrollIntoView({behavior:'smooth'});
+ }catch(e){err.textContent=e.message==='no-enc'?'서랍이 아직 없습니다.':'비밀번호가 맞지 않습니다.';}
+});
+(async()=>{const saved=localStorage.getItem(KEY_STORE);if(!saved)return;try{const enc=await loadEnc();const key=await crypto.subtle.importKey('raw',b64d(saved),'AES-GCM',false,['decrypt']);showDrawer(await openWith(key,enc));}catch(e){localStorage.removeItem(KEY_STORE);}})();
 render();
 })().catch(err=>{document.getElementById('gallery').textContent='앱 목록을 불러오지 못했습니다. 로컬 서버로 열어 주세요.';console.error(err);});
 </script>

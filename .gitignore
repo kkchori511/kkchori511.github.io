@@ -3,3 +3,4 @@ designs/
 docs/
 assets/character/
 .DS_Store
+data/private.json

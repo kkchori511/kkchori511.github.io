@@ -79,16 +79,6 @@
       "summary": "봉사활동 신청과 기록을 구글 시트로 관리한다."
     },
     {
-      "id": "hwp-telegram-assistant",
-      "name": "한글 비서봇",
-      "category": "work",
-      "platform": [
-        "Telegram"
-      ],
-      "status": "stable",
-      "summary": "텔레그램으로 한글(HWPX) 문서 작업을 맡긴다."
-    },
-    {
       "id": "any-slide",
       "name": "Any-Slide",
       "category": "present",
@@ -145,16 +135,6 @@
       "status": "stable",
       "version": "1.2",
       "summary": "태양광 출력과 날씨를 픽셀 시계에 표시한다."
-    },
-    {
-      "id": "camping_bot",
-      "name": "캠핑장 예약 알리미",
-      "category": "home",
-      "platform": [
-        "macOS"
-      ],
-      "status": "stable",
-      "summary": "캠핑장 빈자리를 모니터링해 알려 준다."
     },
     {
       "id": "hwpx-cli",
