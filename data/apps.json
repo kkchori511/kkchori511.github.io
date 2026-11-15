@@ -4,7 +4,8 @@
     "added": "처음 올린 날짜 YYYY-MM-DD. 15일 동안 반짝이(새 앱)",
     "updated": "마지막 업데이트 날짜 YYYY-MM-DD. 15일 동안 체크(업데이트)",
     "origin": "외부 제작 도구의 출처. 있으면 '공방 연장통' 구역에 들어가고 직접 만든 앱 수에서 빠진다",
-    "site.updated": "공방 소개 팝업에 보이는 마지막 판올림 날짜 YYYY-MM-DD"
+    "site.updated": "공방 소개 팝업에 보이는 마지막 판올림 날짜 YYYY-MM-DD",
+    "links": "팝업 버튼. kind: download(실행 파일, releases/latest/download/파일 주소)·web(실행 페이지)·repo(저장소). 개발 중(dev) 앱은 넣지 않고 베타부터 넣는다"
   },
   "site": {
     "updated": "2026-11-15"
@@ -55,7 +56,19 @@
       ],
       "status": "beta",
       "summary": "학습지·기록을 학생별로 모아 AI로 생기부 문장을 만든다.",
-      "thumb": "assets/apps/sgb-juicer.jpg"
+      "thumb": "assets/apps/sgb-juicer.jpg",
+      "links": [
+        {
+          "label": "Windows",
+          "kind": "download",
+          "url": "https://github.com/kkchori511/sgb-juicer/releases/latest/download/SGB-Juicer.exe"
+        },
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/sgb-juicer"
+        }
+      ]
     },
     {
       "id": "ncloud-pdf-ocr",
@@ -66,14 +79,26 @@
       ],
       "status": "stable",
       "version": "1.0.0",
-      "summary": "손글씨 과제 스캔 PDF를 OCR과 AI로 정리해 Excel로 저장한다."
+      "summary": "손글씨 과제 스캔 PDF를 OCR과 AI로 정리해 Excel로 저장한다.",
+      "links": [
+        {
+          "label": "Windows",
+          "kind": "download",
+          "url": "https://github.com/kkchori511/ncloud-pdf-ocr/releases/latest/download/Akpil.exe"
+        },
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/ncloud-pdf-ocr"
+        }
+      ]
     },
     {
       "id": "School-volunteer-system",
       "name": "학교 봉사활동 관리",
       "category": "work",
       "platform": [
-        "Google Sheets"
+        "Windows"
       ],
       "status": "dev",
       "summary": "봉사활동 신청과 기록을 구글 시트로 관리한다."
@@ -87,7 +112,14 @@
       ],
       "status": "stable",
       "summary": "내 캐릭터 스타일의 발표 슬라이드 웹 앱.",
-      "thumb": "assets/apps/any-slide.jpg"
+      "thumb": "assets/apps/any-slide.jpg",
+      "links": [
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/any-slide"
+        }
+      ]
     },
     {
       "id": "xy-plane",
@@ -98,7 +130,19 @@
       ],
       "status": "stable",
       "summary": "y=x 대칭으로 역함수 그래프를 보여 주는 수업 도구.",
-      "thumb": "assets/apps/xy-plane.jpg"
+      "thumb": "assets/apps/xy-plane.jpg",
+      "links": [
+        {
+          "label": "Web",
+          "kind": "web",
+          "url": "https://kkchori511.github.io/xy-plane/"
+        },
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/xy-plane"
+        }
+      ]
     },
     {
       "id": "blockus",
@@ -109,9 +153,20 @@
         "Tablet"
       ],
       "status": "stable",
-      "url": "https://kkchori511.github.io/blockus-web/",
       "summary": "한 화면에서 2~4명이 함께하는 로컬 대전 블로커스.",
-      "thumb": "assets/apps/blockus.jpg"
+      "thumb": "assets/apps/blockus.jpg",
+      "links": [
+        {
+          "label": "Web",
+          "kind": "web",
+          "url": "https://kkchori511.github.io/blockus-web/"
+        },
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/blockus-web"
+        }
+      ]
     },
     {
       "id": "mancala",
@@ -122,19 +177,42 @@
       ],
       "status": "stable",
       "summary": "전통 보드게임 만칼라를 웹에서.",
-      "thumb": "assets/apps/mancala.jpg"
+      "thumb": "assets/apps/mancala.jpg",
+      "links": [
+        {
+          "label": "Web",
+          "kind": "web",
+          "url": "https://kkchori511.github.io/mancala-web/"
+        },
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/mancala-web"
+        }
+      ]
     },
     {
       "id": "solardisplay",
       "name": "태양광 픽셀 시계",
       "category": "home",
       "platform": [
-        "SmartThings",
-        "TC001"
+        "GitHub"
       ],
       "status": "stable",
       "version": "1.2",
-      "summary": "태양광 출력과 날씨를 픽셀 시계에 표시한다."
+      "summary": "태양광 출력과 날씨를 픽셀 시계에 표시한다.",
+      "links": [
+        {
+          "label": "GitHub · ST Edge Driver",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/Solardisplay_ST_Edgedriver"
+        },
+        {
+          "label": "GitHub · TC001",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/Solardisplay_ST_TC001"
+        }
+      ]
     },
     {
       "id": "hwpx-cli",
@@ -161,7 +239,14 @@
         "Claude Code"
       ],
       "status": "stable",
-      "summary": "Claude Code 화면을 바꾸는 mod 모음."
+      "summary": "Claude Code 화면을 바꾸는 mod 모음.",
+      "links": [
+        {
+          "label": "GitHub",
+          "kind": "repo",
+          "url": "https://github.com/kkchori511/claude-mods"
+        }
+      ]
     }
   ]
 }

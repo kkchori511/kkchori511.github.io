@@ -63,6 +63,15 @@
 - 데스크톱 1440px, 모바일 390px에서 확인한다. 헤드리스 Chrome은 창을 500px보다 좁게 못 만들므로, 모바일은 DevTools 프로토콜의 `Emulation.setDeviceMetricsOverride`로 찍는다.
 - 새 앱·업데이트 표시는 주소 끝에 `?demo-badges`를 붙여 미리 볼 수 있다.
 
+## 앱 연결 (팝업 버튼)
+
+- 카드를 누르면 정보 팝업이 열리고, `links`의 버튼으로 다운로드·실행·저장소 이동을 한다.
+  - `download`: 실행 파일. 주소는 `https://github.com/<저장소>/releases/latest/download/<파일 이름>`(항상 최신). Release 파일 이름은 **영문**으로 둔다(한글이면 GitHub가 `default.exe`로 바꾼다).
+  - `web`: 웹으로 바로 실행되는 페이지(Pages 등). 저장소 버튼(`repo`)도 함께 둔다.
+  - `repo`: 실행 파일이 없는 앱은 저장소로 연결한다. 저장소가 여러 개면 `GitHub · <이름>`으로 버튼을 나눈다.
+- **개발 중(`dev`) 앱은 연결하지 않는다. 베타부터 연결한다.**
+- 연결한 주소는 `curl -sIL`로 200이 나오는지 확인한다.
+
 ## 나만의 서랍 (비공개 카드)
 
 - 사용자만 보는 카드는 `data/private.json`(커밋하지 않음)에 `apps.json`과 같은 형식으로 적는다. `url`이 있으면 카드를 누를 때 그 주소를 연다.
