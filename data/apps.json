@@ -1,0 +1,187 @@
+{
+  "_fields": {
+    "thumb": "스크린샷 경로(16:10). 없으면 카테고리 색 임시 그림",
+    "added": "처음 올린 날짜 YYYY-MM-DD. 15일 동안 반짝이(새 앱)",
+    "updated": "마지막 업데이트 날짜 YYYY-MM-DD. 15일 동안 체크(업데이트)",
+    "origin": "외부 제작 도구의 출처. 있으면 '공방 연장통' 구역에 들어가고 직접 만든 앱 수에서 빠진다",
+    "site.updated": "공방 소개 팝업에 보이는 마지막 판올림 날짜 YYYY-MM-DD"
+  },
+  "site": {
+    "updated": "2026-11-15"
+  },
+  "categories": [
+    {
+      "id": "class",
+      "name": "수업 도구",
+      "desc": "교실에서 바로 쓰는 수업용 앱"
+    },
+    {
+      "id": "work",
+      "name": "학교 업무",
+      "desc": "생기부·채점·문서 등 업무 자동화"
+    },
+    {
+      "id": "present",
+      "name": "발표·디자인",
+      "desc": "슬라이드와 시각 자료"
+    },
+    {
+      "id": "game",
+      "name": "보드게임",
+      "desc": "함께 즐기는 웹 보드게임"
+    },
+    {
+      "id": "home",
+      "name": "디지털 라이프",
+      "desc": "일상생활을 돕는 도구와 자동화"
+    },
+    {
+      "id": "dev",
+      "name": "개발 도구",
+      "desc": "개발과 AI 작업을 돕는 도구"
+    }
+  ],
+  "toolbox": {
+    "name": "공방 연장통",
+    "desc": "직접 만들지는 않았지만, 공방에서 꺼내 쓰는 연장들입니다. 좋은 도구를 공개해 주신 분들께 감사드립니다."
+  },
+  "apps": [
+    {
+      "id": "sgb-juicer",
+      "name": "생기부 착즙기",
+      "category": "work",
+      "platform": [
+        "Windows"
+      ],
+      "status": "beta",
+      "summary": "학습지·기록을 학생별로 모아 AI로 생기부 문장을 만든다.",
+      "thumb": "assets/apps/sgb-juicer.jpg"
+    },
+    {
+      "id": "ncloud-pdf-ocr",
+      "name": "악필교정기",
+      "category": "work",
+      "platform": [
+        "Windows"
+      ],
+      "status": "stable",
+      "version": "1.0.0",
+      "summary": "손글씨 과제 스캔 PDF를 OCR과 AI로 정리해 Excel로 저장한다."
+    },
+    {
+      "id": "School-volunteer-system",
+      "name": "학교 봉사활동 관리",
+      "category": "work",
+      "platform": [
+        "Google Sheets"
+      ],
+      "status": "dev",
+      "summary": "봉사활동 신청과 기록을 구글 시트로 관리한다."
+    },
+    {
+      "id": "hwp-telegram-assistant",
+      "name": "한글 비서봇",
+      "category": "work",
+      "platform": [
+        "Telegram"
+      ],
+      "status": "stable",
+      "summary": "텔레그램으로 한글(HWPX) 문서 작업을 맡긴다."
+    },
+    {
+      "id": "any-slide",
+      "name": "Any-Slide",
+      "category": "present",
+      "platform": [
+        "Web"
+      ],
+      "status": "stable",
+      "summary": "내 캐릭터 스타일의 발표 슬라이드 웹 앱.",
+      "thumb": "assets/apps/any-slide.jpg"
+    },
+    {
+      "id": "xy-plane",
+      "name": "좌표평면 - 역함수 그래프",
+      "category": "class",
+      "platform": [
+        "Web"
+      ],
+      "status": "stable",
+      "summary": "y=x 대칭으로 역함수 그래프를 보여 주는 수업 도구.",
+      "thumb": "assets/apps/xy-plane.jpg"
+    },
+    {
+      "id": "blockus",
+      "name": "블로커스 웹",
+      "category": "game",
+      "platform": [
+        "Web",
+        "Tablet"
+      ],
+      "status": "stable",
+      "url": "https://kkchori511.github.io/blockus-web/",
+      "summary": "한 화면에서 2~4명이 함께하는 로컬 대전 블로커스.",
+      "thumb": "assets/apps/blockus.jpg"
+    },
+    {
+      "id": "mancala",
+      "name": "만칼라",
+      "category": "game",
+      "platform": [
+        "Web"
+      ],
+      "status": "stable",
+      "summary": "전통 보드게임 만칼라를 웹에서.",
+      "thumb": "assets/apps/mancala.jpg"
+    },
+    {
+      "id": "solardisplay",
+      "name": "태양광 픽셀 시계",
+      "category": "home",
+      "platform": [
+        "SmartThings",
+        "TC001"
+      ],
+      "status": "stable",
+      "version": "1.2",
+      "summary": "태양광 출력과 날씨를 픽셀 시계에 표시한다."
+    },
+    {
+      "id": "camping_bot",
+      "name": "캠핑장 예약 알리미",
+      "category": "home",
+      "platform": [
+        "macOS"
+      ],
+      "status": "stable",
+      "summary": "캠핑장 빈자리를 모니터링해 알려 준다."
+    },
+    {
+      "id": "hwpx-cli",
+      "name": "hwpx-cli",
+      "category": "dev",
+      "platform": [
+        "CLI",
+        "MCP"
+      ],
+      "status": "stable",
+      "summary": "한글(HWPX) 문서를 읽고 바꾸는 자동화 도구 상자. 저장소를 클론해 Claude 스킬로 활용한다.",
+      "origin": {
+        "author": "reallygood83",
+        "repo": "reallygood83/hwpx-cli",
+        "url": "https://github.com/reallygood83/hwpx-cli",
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "id": "claude-mods",
+      "name": "claude-mods",
+      "category": "dev",
+      "platform": [
+        "Claude Code"
+      ],
+      "status": "stable",
+      "summary": "Claude Code 화면을 바꾸는 mod 모음."
+    }
+  ]
+}
