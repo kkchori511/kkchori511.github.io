@@ -5,7 +5,8 @@
     "updated": "마지막 업데이트 날짜 YYYY-MM-DD. 15일 동안 체크(업데이트)",
     "origin": "외부 제작 도구의 출처. 있으면 '공방 연장통' 구역에 들어가고 직접 만든 앱 수에서 빠진다",
     "site.updated": "공방 소개 팝업에 보이는 마지막 판올림 날짜 YYYY-MM-DD",
-    "links": "팝업 버튼. kind: download(실행 파일, releases/latest/download/파일 주소)·web(실행 페이지)·repo(저장소). 개발 중(dev) 앱은 넣지 않고 베타부터 넣는다"
+    "links": "팝업 버튼. kind: download(실행 파일, releases/latest/download/파일 주소)·web(실행 페이지)·repo(저장소). 개발 중(dev) 앱은 넣지 않고 베타부터 넣는다",
+    "release": "최신 릴리즈를 읽을 저장소 owner/repo. 없으면 download 링크의 저장소를 쓴다. 페이지가 열릴 때 GitHub에서 버전과 업데이트 날짜를 자동으로 채운다"
   },
   "site": {
     "updated": "2026-11-15"

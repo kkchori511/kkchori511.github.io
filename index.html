@@ -331,6 +331,17 @@ document.getElementById('drawer-form').addEventListener('submit',async event=>{
 });
 (async()=>{const saved=localStorage.getItem(KEY_STORE);if(!saved)return;try{const enc=await loadEnc();const key=await crypto.subtle.importKey('raw',b64d(saved),'AES-GCM',false,['decrypt']);showDrawer(await openWith(key,enc));}catch(e){localStorage.removeItem(KEY_STORE);}})();
 render();
+// 최신 릴리즈를 GitHub에서 읽어 버전·업데이트 날짜를 채운다. 실패하면 apps.json 값을 그대로 쓴다.
+const repoOf=a=>a.release||(((a.links||[]).find(l=>l.kind==='download')||{}).url||'').match(/github\.com\/([^/]+\/[^/]+)\/releases/)?.[1];
+const REL_KEY='workshop-releases';
+(async()=>{let cache={};try{cache=JSON.parse(sessionStorage.getItem(REL_KEY))||{};}catch(e){}
+ let changed=false;
+ await Promise.all(DATA.apps.map(async a=>{const repo=repoOf(a);if(!repo)return;let r=cache[repo];
+  if(!r){try{const res=await fetch(`https://api.github.com/repos/${repo}/releases/latest`);if(!res.ok)return;const j=await res.json();r=cache[repo]={tag:j.tag_name||'',date:(j.published_at||'').slice(0,10)};}catch(e){return;}}
+  if(r.tag){a.version=r.tag.replace(/^v/,'');changed=true;}
+  if(r.date&&(!a.updated||r.date>a.updated)){a.updated=r.date;changed=true;}}));
+ try{sessionStorage.setItem(REL_KEY,JSON.stringify(cache));}catch(e){}
+ if(changed)render();})();
 })().catch(err=>{document.getElementById('gallery').textContent='앱 목록을 불러오지 못했습니다. 로컬 서버로 열어 주세요.';console.error(err);});
 </script>
 <script>
