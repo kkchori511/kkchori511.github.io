@@ -79,8 +79,8 @@
         "Windows"
       ],
       "status": "stable",
-      "version": "1.0.0",
-      "summary": "손글씨 과제 스캔 PDF를 OCR과 AI로 정리해 Excel로 저장한다.",
+      "version": "1.1.0",
+      "summary": "손글씨 과제 스캔을 OCR로 읽어 학생별로 묶고, AI로 다듬어 Excel로 저장한다.",
       "links": [
         {
           "label": "Windows",
@@ -88,11 +88,18 @@
           "url": "https://github.com/kkchori511/ncloud-pdf-ocr/releases/latest/download/Akpil.exe"
         },
         {
+          "label": "내려받기 페이지",
+          "kind": "web",
+          "url": "https://kkchori511.github.io/ncloud-pdf-ocr/"
+        },
+        {
           "label": "GitHub",
           "kind": "repo",
           "url": "https://github.com/kkchori511/ncloud-pdf-ocr"
         }
-      ]
+      ],
+      "updated": "2026-11-26",
+      "thumb": "assets/apps/ncloud-pdf-ocr.jpg"
     },
     {
       "id": "School-volunteer-system",
