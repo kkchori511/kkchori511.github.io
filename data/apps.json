@@ -79,8 +79,8 @@
         "Windows"
       ],
       "status": "stable",
-      "version": "1.1.0",
-      "summary": "손글씨 과제 스캔을 OCR로 읽어 학생별로 묶고, AI로 다듬어 Excel로 저장한다.",
+      "version": "1.2.0",
+      "summary": "손글씨 과제 스캔을 OCR(CLOVA·Qwen)로 읽어 학생별로 묶고, AI로 다듬어 Excel로 저장한다.",
       "links": [
         {
           "label": "Windows",
