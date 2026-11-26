@@ -9,7 +9,7 @@
     "release": "최신 릴리즈를 읽을 저장소 owner/repo. 없으면 download 링크의 저장소를 쓴다. 페이지가 열릴 때 GitHub에서 버전과 업데이트 날짜를 자동으로 채운다"
   },
   "site": {
-    "updated": "2026-11-15"
+    "updated": "2026-11-26"
   },
   "categories": [
     {
@@ -55,7 +55,7 @@
       "platform": [
         "Windows"
       ],
-      "status": "beta",
+      "status": "stable",
       "summary": "학습지·기록을 학생별로 모아 AI로 생기부 문장을 만든다.",
       "thumb": "assets/apps/sgb-juicer.jpg",
       "links": [
